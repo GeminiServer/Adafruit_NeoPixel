@@ -1865,19 +1865,19 @@ void Adafruit_NeoPixel::show(void) {
         // data ONE high
         // min: 550 typ: 700 max: 5,500
         gpio_set(pin);
-        time::delay_ns(700);
+        time::delay_ns(550);
         // min: 450 typ: 600 max: 5,000
         gpio_clear(pin);
-        time::delay_ns(600);
+        time::delay_ns(450);
       } else {
         // data ZERO high
         // min: 200  typ: 350 max: 500
         gpio_set(pin);
-        time::delay_ns(350);
+        time::delay_ns(200);
         // data low
         // min: 450 typ: 600 max: 5,000
         gpio_clear(pin);
-        time::delay_ns(600);
+        time::delay_ns(450);
       }
       if(bitMask >>= 1) {
         // Move on to the next pixel
